@@ -265,15 +265,30 @@ Puntuación = 0.4×(χ² sospechoso) + 0.2×(desviación de media) +
 ## 👥 Equipo Snoopy
 
 Desarrollado con 💜 por el Equipo Snoopy
+- Jennifer Patricia Valencia Ignacio, Código: 223991721
+- Elizabeth Arroyo Moreno, Código: 221453749 
+- Karla Rebeca Hernández Elizarrarás, Código: 223991977
 
+---
+
+# Referencias
+
+### Esteganografía y LSB
+- Kaspersky. (2023, febrero 8). *¿Qué es la esteganografía? ¿Cómo funciona?* https://latam.kaspersky.com/resource-center/definitions/what-is-steganography
+
+- Lenovo. (s.f.). *¿Qué es el Bit Menos Significativo y Cómo Afecta a la Manipulación de Datos?* Recuperado el 27 de noviembre de 2025, de https://www.lenovo.com/es/es/glossary/least-significant-bit/
+
+### Algoritmos Implementados
+- Casero, A. (2023, diciembre 13). *¿Qué es el algoritmo de fuerza bruta en programación?* KeepCoding Bootcamps. https://keepcoding.io/blog/algoritmo-de-fuerza-bruta-en-programacion/
+
+- freeCodeCamp. (2020, enero 6). *Brute Force Algorithms explained.* https://www.freecodecamp.org/news/brute-force-algorithms-explained/
+
+- García, D. C. (s.f.). *La recursividad y el algoritmo de divide y vencerás.* Medium. Recuperado el 27 de noviembre de 2025, de https://medium.com/@davidcabreraygarcia/la-recursividad-y-el-algoritmo-de-divide-y-vencerás-9418325e55b5
+
+- Martínez, J. E. (2020, junio 10). *Algoritmia: Divide y vencerás.* Adictos al trabajo. https://adictosaltrabajo.com/2020/06/10/algoritmia-divide-y-venceras/
+
+- Nb, T. H. A. (2023, mayo 12). *What is a Greedy Algorithm? Examples of Greedy Algorithms.* freeCodeCamp. https://www.freecodecamp.org/news/greedy-algorithms/
 
 ---
 
-##  Referencias
-
-- **Esteganografía LSB:** Provos, N., & Honeyman, P. (2003). "Hide and Seek: An Introduction to Steganography"
-- **Compresión Huffman:** Huffman, D. A. (1952). "A Method for the Construction of Minimum-Redundancy Codes"
-- **Análisis Estegano:** Ker, A. D. (2005). "Steganalysis of LSB Matching in Grayscale Images"
-
----
 
