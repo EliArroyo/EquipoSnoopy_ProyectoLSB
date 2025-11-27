@@ -204,7 +204,7 @@ lsb-detector-huffman/
 
 ### ¿Por qué son importantes estas métricas?
 
-#### Test de Chi-Cuadrado (χ²)
+#### Test de Chi-Cuadrado (χ^2)
 El test de Chi-Cuadrado compara la distribución observada de valores de píxeles con la distribución esperada en una imagen natural. En imágenes sin esteganografía, los valores de píxeles adyacentes (pares e impares) deberían tener frecuencias similares.
 
 **Interpretación:**
