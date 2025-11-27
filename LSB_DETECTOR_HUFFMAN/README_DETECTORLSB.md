@@ -1,10 +1,10 @@
 # 🔐 Detector LSB con Compresión Huffman
 
-**Equipo Snoopy** | Proyecto de Ciberseguridad y Esteganografía
+**Equipo Snoopy** | Proyecto de Esteganografía LSB
 
 ---
 
-## 📋 Descripción del Proyecto
+## Descripción del Proyecto
 
 La **esteganografía LSB (Least Significant Bit)** es una técnica ampliamente utilizada para ocultar información secreta dentro de imágenes digitales, modificando el bit menos significativo de los valores de píxeles. Aunque es efectiva, puede ser detectada mediante análisis estadístico avanzado.
 
@@ -18,12 +18,12 @@ Este proyecto proporciona una **herramienta completa** que no solo detecta esteg
 
 ---
 
-## ✨ Características Principales
+## aracterísticas Principales
 
-### 🔍 Análisis y Detección
+### Análisis y Detección
 - **Extracción de mensajes LSB** mediante dos algoritmos:
-  - 🚀 **Fuerza Bruta:** Iteración directa sobre todos los píxeles
-  - ⚡ **Divide y Vencerás:** Algoritmo recursivo optimizado para grandes imágenes
+- **Fuerza Bruta:** Iteración directa sobre todos los píxeles
+- **Divide y Vencerás:** Algoritmo recursivo optimizado para grandes imágenes
 - **Detección de mensajes comprimidos con Huffman:** Descompresión automática de payloads esteganográficos
 - **Comparación de rendimiento** entre métodos de extracción
 
@@ -34,7 +34,7 @@ Este proyecto proporciona una **herramienta completa** que no solo detecta esteg
 - **Correlación Espacial:** Analiza la correlación entre píxeles adyacentes (horizontal y vertical)
 - **Puntuación de Sospecha:** Métrica combinada que indica la probabilidad de esteganografía
 
-### 🛠️ Funcionalidades de Esteganografía
+### Funcionalidades de Esteganografía
 - **Creación de imágenes** con mensajes ocultos desde cero
 - **Ocultamiento en imágenes existentes** con LSB estándar
 - **Ocultamiento con compresión Huffman:**
@@ -42,13 +42,13 @@ Este proyecto proporciona una **herramienta completa** que no solo detecta esteg
   - Selección de canal de color (Rojo, Verde, Azul)
   - Inclusión de tabla de códigos Huffman en el payload
 
-### 🖥️ Interfaz Dual
+### Interfaz 
 - **CLI (Command Line Interface):** Menú interactivo para usuarios avanzados
 - **GUI (Graphical User Interface):** Interfaz moderna con `tkinter` para usuarios generales
 
 ---
 
-## 🚀 Instalación
+##  Instalación
 
 ### Requisitos Previos
 - Python 3.7 o superior
@@ -86,20 +86,20 @@ python gui.py
 
 La GUI ofrece cuatro pestañas principales:
 
-1. **📊 Realizar Análisis:**
+1. **Realizar Análisis:**
    - Selecciona una imagen
    - Ejecuta análisis completo (extracción estándar + Huffman + estadísticas)
    - Visualiza resultados en tiempo real
 
-2. **➕ Crear Imagen:**
+2. **Crear Imagen:**
    - Genera una nueva imagen (200x200 px) con mensaje oculto
    - Ideal para pruebas rápidas
 
-3. **🔒 Ocultar Estándar:**
+3. **Ocultar Estándar:**
    - Oculta mensajes en imágenes existentes usando LSB estándar
    - Sin compresión
 
-4. **🗜️ Ocultar con Huffman:**
+4. **Ocultar usando Huffman:**
    - Oculta mensajes con compresión Huffman
    - Selección de canal RGB
    - Mayor eficiencia de espacio
@@ -134,7 +134,7 @@ python huffman.py
 
 ---
 
-## 🏗️ Arquitectura del Proyecto
+## Arquitectura del Proyecto
 
 ### Archivos Principales
 
@@ -142,7 +142,7 @@ python huffman.py
 lsb-detector-huffman/
 │
 ├── huffman.py          # Módulo principal con todas las clases
-├── gui.py              # Interfaz gráfica de usuario
+├── gui.py              # Interfaz gráfica 
 └── README.md           # Documentación del proyecto
 ```
 
@@ -200,11 +200,11 @@ lsb-detector-huffman/
 
 ---
 
-## 📈 Análisis Estadístico: Fundamentos
+## Análisis Estadístico: Fundamentos
 
 ### ¿Por qué son importantes estas métricas?
 
-#### 🔬 Test de Chi-Cuadrado (χ²)
+#### Test de Chi-Cuadrado (χ²)
 El test de Chi-Cuadrado compara la distribución observada de valores de píxeles con la distribución esperada en una imagen natural. En imágenes sin esteganografía, los valores de píxeles adyacentes (pares e impares) deberían tener frecuencias similares.
 
 **Interpretación:**
@@ -214,7 +214,7 @@ El test de Chi-Cuadrado compara la distribución observada de valores de píxele
 
 ---
 
-#### 🎲 Entropía de Shannon
+#### Entropía 
 La entropía mide el grado de aleatoriedad o incertidumbre en los bits LSB. En imágenes naturales, los LSB tienen entropía moderada (~0.7-0.9). La esteganografía tiende a **aumentar** la entropía hacia el máximo teórico (1.0).
 
 **Interpretación:**
@@ -224,7 +224,7 @@ La entropía mide el grado de aleatoriedad o incertidumbre en los bits LSB. En i
 
 ---
 
-#### 🔗 Correlación Espacial
+#### Correlación Espacial
 Las imágenes naturales presentan alta correlación entre píxeles vecinos (típicamente > 0.9) debido a la continuidad visual. La esteganografía LSB **reduce** esta correlación al introducir cambios pseudo-aleatorios.
 
 **Interpretación:**
@@ -234,7 +234,7 @@ Las imágenes naturales presentan alta correlación entre píxeles vecinos (típ
 
 ---
 
-#### 🏃 Runs Test (Test de Rachas)
+####  Runs Test (Test de Rachas)
 Evalúa la secuencialidad de bits LSB. En secuencias aleatorias, el número de "rachas" (transiciones 0→1 o 1→0) sigue una distribución predecible. Desviaciones sugieren patrones artificiales.
 
 **Interpretación:**
@@ -243,7 +243,7 @@ Evalúa la secuencialidad de bits LSB. En secuencias aleatorias, el número de "
 
 ---
 
-### 🎯 Puntuación de Sospecha Combinada
+### Puntuación de Sospecha Combinada
 
 El sistema integra todas las métricas anteriores en una puntuación ponderada (0.0 - 1.0):
 
@@ -259,35 +259,6 @@ Puntuación = 0.4×(χ² sospechoso) + 0.2×(desviación de media) +
 
 ---
 
-## 🤝 Contribución
-
-Las contribuciones son bienvenidas. Para contribuir:
-
-1. Haz un fork del repositorio
-2. Crea una rama para tu feature (`git checkout -b feature/nueva-funcionalidad`)
-3. Realiza tus cambios y haz commit (`git commit -m 'Agrega nueva funcionalidad'`)
-4. Sube tus cambios (`git push origin feature/nueva-funcionalidad`)
-5. Abre un Pull Request
-
-### Áreas de Mejora Sugeridas
-- Soporte para formatos de imagen adicionales (TIFF, WebP)
-- Implementación de esteganografía en otros planos de bits (2-LSB, 3-LSB)
-- Algoritmos de compresión alternativos (LZW, Arithmetic Coding)
-- Análisis de canal alfa (transparencia)
-- Interfaz web con Flask/Django
-
----
-
-## 📄 Licencia
-
-Este proyecto se distribuye bajo la **Licencia MIT**. Consulta el archivo `LICENSE` para más detalles.
-
-```
-Copyright (c) 2024 Equipo Snoopy
-
-Se concede permiso para usar, copiar, modificar y distribuir este software
-con fines académicos y de investigación.
-```
 
 ---
 
@@ -295,11 +266,10 @@ con fines académicos y de investigación.
 
 Desarrollado con 💜 por el Equipo Snoopy
 
-**Contacto:** [tu-email@ejemplo.com](mailto:tu-email@ejemplo.com)
 
 ---
 
-## 🔗 Referencias
+##  Referencias
 
 - **Esteganografía LSB:** Provos, N., & Honeyman, P. (2003). "Hide and Seek: An Introduction to Steganography"
 - **Compresión Huffman:** Huffman, D. A. (1952). "A Method for the Construction of Minimum-Redundancy Codes"
@@ -307,4 +277,3 @@ Desarrollado con 💜 por el Equipo Snoopy
 
 ---
 
-**⚠️ Nota Legal:** Esta herramienta está diseñada con fines educativos y de investigación en el campo de la ciberseguridad. Los usuarios son responsables de cumplir con las leyes y regulaciones aplicables en su jurisdicción.
